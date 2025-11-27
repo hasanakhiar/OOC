@@ -1,14 +1,15 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Student extends Person {
+public class Faculty extends Person {
     private List<Book> borrowedBooks;
 
-    public Student() {
-        super();
+    public Faculty() {
+        super("Faculty Member", "faculty@uni.edu");
         this.borrowedBooks = new ArrayList<>();
     }
 
-    public Student(String name, String email) {
+    public Faculty(String name, String email) {
         super(name, email);
         this.borrowedBooks = new ArrayList<>();
     }
@@ -20,12 +21,12 @@ public class Student extends Person {
 
     @Override
     public void displayDetails() {
-        System.out.println("--- Student Profile ---");
-        System.out.println("Name: " + this.name);
-        System.out.println("Email: " + this.email);
-        System.out.println("Books Borrowed:");
+        System.out.println("--- Faculty Record ---");
+        System.out.println("Professor: " + this.name);
+        System.out.println("Contact: " + this.email);
+        System.out.println("Current Loans:");
         if (borrowedBooks.isEmpty()) {
-            System.out.println("   No books borrowed.");
+            System.out.println("   No active loans.");
         } else {
             for (Book b : borrowedBooks) {
                 b.displayInfo();
