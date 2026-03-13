@@ -1,0 +1,13 @@
+POST http://localhost:8080/ws/user
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://soapcalculator.example.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:add>
+            <num1>10</num1>
+            <num2>5</num2>
+        </web:add>
+    </soapenv:Body>
+</soapenv:Envelope>

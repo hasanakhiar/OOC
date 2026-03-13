@@ -1,0 +1,46 @@
+### Addition (10 + 5)
+POST http://localhost:8080/soap_calculator_war_exploded/calculator
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://soapcalculator.example.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:add>
+            <num1>10</num1>
+            <num2>5</num2>
+        </web:add>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+### Test 2: Subtraction (20 - 5)
+POST http://localhost:8080/soap_calculator_war_exploded/calculator
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://soapcalculator.example.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:subtract>
+            <num1>20</num1>
+            <num2>5</num2>
+        </web:subtract>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+### Test 3: Multiplication (5 * 5)
+POST http://localhost:8080/soap_calculator_war_exploded/calculator
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://soapcalculator.example.org/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:multiply>
+            <num1>5</num1>
+            <num2>5</num2>
+        </web:multiply>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+
